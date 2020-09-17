@@ -12,13 +12,18 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Observer(builder: (_) {
+      final result = controller.userFuture.result;
+
       return Stack(
         children: [
           ListView.builder(
-            itemCount: controller.users.length,
+            itemCount: result?.fold((_) => 0, (users) => users.length),
             itemBuilder: (context, int index) {
               return ListTile(
-                title: Text(controller.users[index].name),
+                title: result?.foldRight(
+                  Text(''),
+                  (users, _) => Text(users[index].name),
+                ),
               );
             },
           ),

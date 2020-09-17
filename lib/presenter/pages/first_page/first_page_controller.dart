@@ -18,7 +18,7 @@ class FirstPageController extends _FirstPageControllerBase
 
 abstract class _FirstPageControllerBase with Store {
   final ListAllUsers listAllUsersUseCase;
-  var disposeAutoRun;
+  ReactionDisposer disposeAutoRun;
 
   _FirstPageControllerBase(this.listAllUsersUseCase) {
     this.disposeAutoRun = autorun((_) async {
@@ -27,30 +27,12 @@ abstract class _FirstPageControllerBase with Store {
   }
 
   @observable
-  Failure errorMessage;
-
-  @observable
-  ObservableList<User> users = ObservableList();
-
-  @observable
   ObservableFuture<Either<Failure, List<User>>> userFuture;
-
-  @observable
-  bool loading = false;
 
   @action
   Future fetchUsers() async {
     userFuture = ObservableFuture(
       listAllUsersUseCase(NoParams()).then((result) => result),
-    );
-
-    (await userFuture).fold(
-      (error) {
-        this.errorMessage = error;
-      },
-      (response) {
-        this.users = response.asObservable();
-      },
     );
   }
 }
