@@ -1,4 +1,4 @@
-package com.example.miccional_app
+package com.demo.miccional_app
 
 import io.flutter.embedding.android.FlutterActivity
 
