@@ -7,6 +7,7 @@ class TestPage extends StatelessWidget {
   final String route;
   final Function onPress;
   final bool showBackButton;
+  final bool hideAppBar;
 
   TestPage(
       {Key key,
@@ -15,16 +16,19 @@ class TestPage extends StatelessWidget {
       @required this.route,
       @required this.onPress,
       this.showBackButton = true,
-      this.buttonText})
+      this.buttonText,
+      this.hideAppBar = false})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(mainText),
-        automaticallyImplyLeading: showBackButton,
-      ),
+      appBar: !hideAppBar
+          ? AppBar(
+              title: Text(mainText),
+              automaticallyImplyLeading: showBackButton,
+            )
+          : null,
       body: Container(
         constraints: BoxConstraints.expand(),
         color: color,

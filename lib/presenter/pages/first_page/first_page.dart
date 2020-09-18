@@ -14,27 +14,32 @@ class FirstPage extends StatelessWidget {
     return Observer(builder: (_) {
       final result = controller.userFuture.result;
 
-      return Stack(
-        children: [
-          ListView.builder(
-            itemCount: result?.fold((_) => 0, (users) => users.length),
-            itemBuilder: (context, int index) {
-              return ListTile(
-                title: result?.foldRight(
-                  Text(''),
-                  (users, _) => Text(users[index].name),
-                ),
-              );
-            },
-          ),
-          Visibility(
-            visible: controller.userFuture.status != FutureStatus.fulfilled &&
-                controller.userFuture.status != FutureStatus.rejected,
-            child: Align(
-              child: CircularProgressIndicator(),
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('First Page'),
+        ),
+        body: Stack(
+          children: [
+            ListView.builder(
+              itemCount: result?.fold((_) => 0, (users) => users.length),
+              itemBuilder: (context, int index) {
+                return ListTile(
+                  title: result?.fold(
+                    (_) => Text(''),
+                    (users) => Text(users[index].name),
+                  ),
+                );
+              },
             ),
-          )
-        ],
+            Visibility(
+              visible: controller.userFuture.status != FutureStatus.fulfilled &&
+                  controller.userFuture.status != FutureStatus.rejected,
+              child: Align(
+                child: CircularProgressIndicator(),
+              ),
+            )
+          ],
+        ),
       );
     });
   }

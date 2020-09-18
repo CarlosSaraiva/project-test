@@ -4,4 +4,4 @@ import 'package:miccional_app/presenter/pages/pages.dart';
 @MaterialAutoRouter(routes: <AutoRoute>[
   MaterialRoute(page: ProfilePage, initial: true),
 ])
-class $MessagesRouter {}
+class $ProfileRouter {}

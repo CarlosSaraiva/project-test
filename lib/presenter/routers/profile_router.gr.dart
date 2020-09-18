@@ -12,36 +12,27 @@ import 'package:flutter/material.dart';
 import '../pages/pages.dart';
 
 class Routes {
-  static const String firstPage = '/';
-  static const String secondPage = '/second-page';
+  static const String profilePage = '/';
   static const all = <String>{
-    firstPage,
-    secondPage,
+    profilePage,
   };
 }
 
-class HomeRouter extends RouterBase {
+class ProfileRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
-    RouteDef(Routes.firstPage, page: FirstPage),
-    RouteDef(Routes.secondPage, page: SecondPage),
+    RouteDef(Routes.profilePage, page: ProfilePage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, AutoRouteFactory>{
-    FirstPage: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => FirstPage(),
-        settings: data,
-      );
-    },
-    SecondPage: (data) {
-      final args = data.getArgs<SecondPageArguments>(
-        orElse: () => SecondPageArguments(),
+    ProfilePage: (data) {
+      final args = data.getArgs<ProfilePageArguments>(
+        orElse: () => ProfilePageArguments(),
       );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => SecondPage(
+        builder: (context) => ProfilePage(
           key: args.key,
           color: args.color,
           mainText: args.mainText,
@@ -58,13 +49,13 @@ class HomeRouter extends RouterBase {
 /// Arguments holder classes
 /// *************************************************************************
 
-/// SecondPage arguments holder class
-class SecondPageArguments {
+/// ProfilePage arguments holder class
+class ProfilePageArguments {
   final Key key;
   final dynamic color;
   final dynamic mainText;
   final dynamic route;
   final dynamic onPress;
-  SecondPageArguments(
+  ProfilePageArguments(
       {this.key, this.color, this.mainText, this.route, this.onPress});
 }

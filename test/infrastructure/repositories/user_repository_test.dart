@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:miccional_app/core/di/injectable.dart';
 import 'package:injectable/injectable.dart' as di;
+import 'package:miccional_app/core/errors/failures.dart';
 import 'package:miccional_app/domain/entities/user.dart';
 import 'package:miccional_app/infrastructure/data_sources/mock_api.dart';
 import 'package:miccional_app/infrastructure/models/user_model.dart';
@@ -31,10 +32,9 @@ void main() {
     test('should return an Either type of Failture and List<User>', () async {
       when(mockApiClient.getUsers()).thenAnswer((_) async => testUsers);
 
-      final result =
-          (await userRepository.getUsers()).foldRight('', (users, _) => users);
+      final result = await userRepository.getUsers();
 
-      expect(result, isInstanceOf<List<User>>());
+      expect(result, isInstanceOf<Either<Failure, List<User>>>());
       verify(mockApiClient.getUsers());
       verifyNoMoreInteractions(mockApiClient);
     });
