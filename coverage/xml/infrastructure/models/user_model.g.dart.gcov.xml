@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="user_model.g.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.0" lines-covered="0" lines-valid="12" package="/infrastructure/models" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>// GENERATED CODE - DO NOT MODIFY BY HAND</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>part of 'user_model.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code>// JsonSerializableGenerator</code>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>UserModel _$UserModelFromJson(Map&lt;String, dynamic&gt; json) {</code>
+</line>
+<line hits="0">
+<code>  return UserModel(</code>
+</line>
+<line hits="0">
+<code>    id: json['id'] as String,</code>
+</line>
+<line hits="0">
+<code>    createAt: json['createAt'] == null</code>
+</line>
+<line>
+<code>        ? null</code>
+</line>
+<line hits="0">
+<code>        : DateTime.parse(json['createAt'] as String),</code>
+</line>
+<line hits="0">
+<code>    name: json['name'] as String,</code>
+</line>
+<line hits="0">
+<code>    avatar: json['avatar'] as String,</code>
+</line>
+<line>
+<code>  );</code>
+</line>
+<line>
+<code>}</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>Map&lt;String, dynamic&gt; _$UserModelToJson(UserModel instance) =&gt; &lt;String, dynamic&gt;{</code>
+</line>
+<line hits="0">
+<code>      'id': instance.id,</code>
+</line>
+<line hits="0">
+<code>      'createAt': instance.createAt?.toIso8601String(),</code>
+</line>
+<line hits="0">
+<code>      'name': instance.name,</code>
+</line>
+<line hits="0">
+<code>      'avatar': instance.avatar,</code>
+</line>
+<line>
+<code>    };</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

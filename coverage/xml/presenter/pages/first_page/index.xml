@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="index" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.0" lines-covered="0" lines-valid="38" package="/presenter/pages/first_page" testname="lcov.info" version="1.5">
+<sources>
+<source branches-hit="0" branches-valid="0" filename="first_page_controller.g.dart" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="11" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" filename="first_page_controller.dart" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="7" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" filename="first_page.dart" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="20" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+</sources>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../../"/>
+<base href="../../../"/>
+</coverage>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="register_modules.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.5" lines-covered="2" lines-valid="4" package="/core/di" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>import 'package:dio/dio.dart';</code>
+</line>
+<line>
+<code>import 'package:injectable/injectable.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/infrastructure/data_sources/mock_api.dart';</code>
+</line>
+<line>
+<code>import 'package:mockito/mockito.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@injectable</code>
+</line>
+<line>
+<code>class DioMock extends Mock implements MockApiClient {}</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@module</code>
+</line>
+<line>
+<code>abstract class RegisterModules {</code>
+</line>
+<line hits="1">
+<code>  @test</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>  @LazySingleton(as: MockApiClient)</code>
+</line>
+<line hits="1">
+<code>  DioMock get dioMock =&gt; DioMock();</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @prod</code>
+</line>
+<line>
+<code>  @lazySingleton</code>
+</line>
+<line hits="0">
+<code>  Dio get dio =&gt; Dio();</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

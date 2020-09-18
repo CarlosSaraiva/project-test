@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="injectable.config.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.85714287" lines-covered="12" lines-valid="14" package="/core/di" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>// GENERATED CODE - DO NOT MODIFY BY HAND</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code>// InjectableConfigGenerator</code>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>import 'package:dio/dio.dart';</code>
+</line>
+<line>
+<code>import 'package:get_it/get_it.dart';</code>
+</line>
+<line>
+<code>import 'package:injectable/injectable.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>import 'register_modules.dart';</code>
+</line>
+<line>
+<code>import '../../presenter/pages/first_page/first_page.dart';</code>
+</line>
+<line>
+<code>import '../../presenter/pages/first_page/first_page_controller.dart';</code>
+</line>
+<line>
+<code>import '../../domain/repositories/i_user.dart';</code>
+</line>
+<line>
+<code>import '../../domain/use_cases/list_all_users.dart';</code>
+</line>
+<line>
+<code>import '../../infrastructure/data_sources/mock_api.dart';</code>
+</line>
+<line>
+<code>import '../../infrastructure/repositories/user_repository.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>/// Environment names</code>
+</line>
+<line>
+<code>const _prod = 'prod';</code>
+</line>
+<line>
+<code>const _test = 'test';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>/// adds generated dependencies</code>
+</line>
+<line>
+<code>/// to the provided [GetIt] instance</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="2">
+<code>GetIt $initGetIt(</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>  GetIt get, {</code>
+</line>
+<line>
+<code>  String environment,</code>
+</line>
+<line>
+<code>  EnvironmentFilter environmentFilter,</code>
+</line>
+<line>
+<code>}) {</code>
+</line>
+<line hits="2">
+<code>  final gh = GetItHelper(get, environment, environmentFilter);</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="2">
+<code>  final registerModules = _$RegisterModules();</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="2">
+<code>  gh.lazySingleton&lt;Dio&gt;(() =&gt; registerModules.dio, registerFor: {_prod});</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="2">
+<code>  gh.factory&lt;DioMock&gt;(() =&gt; DioMock());</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="2">
+<code>  gh.factory&lt;FirstPage&gt;(() =&gt; FirstPage());</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="4">
+<code>  gh.lazySingleton&lt;IUserRepository&gt;(() =&gt; UserRepositoryMock(),</code>
+<hit count="4" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>      registerFor: {_test});</code>
+</line>
+<line hits="5">
+<code>  gh.lazySingleton&lt;ListAllUsers&gt;(() =&gt; ListAllUsers(get&lt;IUserRepository&gt;()));</code>
+<hit count="5" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="4">
+<code>  gh.lazySingleton&lt;MockApiClient&gt;(() =&gt; registerModules.dioMock,</code>
+<hit count="4" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>      registerFor: {_test});</code>
+</line>
+<line hits="2">
+<code>  gh.factoryParam&lt;MockApiClient, String, dynamic&gt;(</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="0">
+<code>      (baseUrl, _) =&gt; MockApiClient.dioMock(get&lt;Dio&gt;(), baseUrl: baseUrl),</code>
+</line>
+<line>
+<code>      registerFor: {_prod});</code>
+</line>
+<line hits="2">
+<code>  gh.factory&lt;FirstPageController&gt;(</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="0">
+<code>      () =&gt; FirstPageController(get&lt;ListAllUsers&gt;()));</code>
+</line>
+<line hits="2">
+<code>  gh.lazySingleton&lt;IUserRepository&gt;(() =&gt; UserRepository(get&lt;MockApiClient&gt;()),</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>      registerFor: {_prod});</code>
+</line>
+<line>
+<code>  return get;</code>
+</line>
+<line>
+<code>}</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>class _$RegisterModules extends RegisterModules {}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

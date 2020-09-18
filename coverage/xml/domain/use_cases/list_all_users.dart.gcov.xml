@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="list_all_users.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="1.0" lines-covered="3" lines-valid="3" package="/domain/use_cases" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>import 'package:dartz/dartz.dart';</code>
+</line>
+<line>
+<code>import 'package:injectable/injectable.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/core/domain/i_use_case.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/core/errors/failures.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/entities/user.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/repositories/i_user.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@lazySingleton</code>
+</line>
+<line>
+<code>class ListAllUsers implements IUseCase&lt;List&lt;User&gt;, NoParams&gt; {</code>
+</line>
+<line>
+<code>  final IUserRepository _userRepository;</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="1">
+<code>  ListAllUsers(this._userRepository);</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code/>
+</line>
+<line hits="1">
+<code>  @override</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>  Future&lt;Either&lt;Failure, List&lt;User&gt;&gt;&gt; call(NoParams params) {</code>
+</line>
+<line hits="2">
+<code>    return this._userRepository.getUsers();</code>
+<hit count="2" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

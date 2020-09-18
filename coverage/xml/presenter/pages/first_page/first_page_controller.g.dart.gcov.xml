@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="first_page_controller.g.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.0" lines-covered="0" lines-valid="11" package="/presenter/pages/first_page" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>// GENERATED CODE - DO NOT MODIFY BY HAND</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>part of 'first_page_controller.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code>// StoreGenerator</code>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>mixin _$FirstPageController on _FirstPageControllerBase, Store {</code>
+</line>
+<line>
+<code>  final _$userFutureAtom = Atom(name: '_FirstPageControllerBase.userFuture');</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  ObservableFuture&lt;Either&lt;Failure, List&lt;User&gt;&gt;&gt; get userFuture {</code>
+</line>
+<line hits="0">
+<code>    _$userFutureAtom.reportRead();</code>
+</line>
+<line hits="0">
+<code>    return super.userFuture;</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  set userFuture(ObservableFuture&lt;Either&lt;Failure, List&lt;User&gt;&gt;&gt; value) {</code>
+</line>
+<line hits="0">
+<code>    _$userFutureAtom.reportWrite(value, super.userFuture, () {</code>
+</line>
+<line hits="0">
+<code>      super.userFuture = value;</code>
+</line>
+<line>
+<code>    });</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  final _$fetchUsersAsyncAction =</code>
+</line>
+<line>
+<code>      AsyncAction('_FirstPageControllerBase.fetchUsers');</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  Future&lt;dynamic&gt; fetchUsers() {</code>
+</line>
+<line hits="0">
+<code>    return _$fetchUsersAsyncAction.run(() =&gt; super.fetchUsers());</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  String toString() {</code>
+</line>
+<line>
+<code>    return '''</code>
+</line>
+<line hits="0">
+<code>userFuture: ${userFuture}</code>
+</line>
+<line hits="0">
+<code>    ''';</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../../"/>
+<base href="../../../"/>
+</coverage>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="user_model.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.4" lines-covered="2" lines-valid="5" package="/infrastructure/models" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>import 'package:json_annotation/json_annotation.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/entities/user.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>part 'user_model.g.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@JsonSerializable()</code>
+</line>
+<line>
+<code>class UserModel extends User {</code>
+</line>
+<line hits="1">
+<code>  UserModel({</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>    @JsonKey(required: false) String id,</code>
+</line>
+<line>
+<code>    DateTime createAt,</code>
+</line>
+<line>
+<code>    String name,</code>
+</line>
+<line>
+<code>    String avatar,</code>
+</line>
+<line hits="1">
+<code>  }) : super(createAt: createAt, avatar: avatar, name: name, id: id);</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  factory UserModel.fromJson(Map&lt;String, dynamic&gt; json) =&gt;</code>
+</line>
+<line hits="0">
+<code>      _$UserModelFromJson(json);</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  Map&lt;String, dynamic&gt; toJson() =&gt; _$UserModelToJson(this);</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

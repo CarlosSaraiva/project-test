@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="index" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.22881356" lines-covered="27" lines-valid="118" testname="lcov.info" version="1.5">
+<sources>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="3" lines-valid="3" pathname="/domain/use_cases" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="17" lines-valid="21" pathname="/core/di" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="2" pathname="/core/domain" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="4" lines-valid="16" pathname="/infrastructure/repositories" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="5" pathname="/core/errors" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="1" lines-valid="3" pathname="/domain/entities" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="38" pathname="/presenter/pages/first_page" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="0" lines-valid="13" pathname="/infrastructure/data_sources" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+<source branches-hit="0" branches-valid="0" functions-hit="0" functions-valid="0" lines-hit="2" lines-valid="17" pathname="/infrastructure/models" prefix="/Users/carlo/repositories/miccional_app/lib"/>
+</sources>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+</coverage>

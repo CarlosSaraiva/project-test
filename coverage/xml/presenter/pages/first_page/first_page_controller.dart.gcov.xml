@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="first_page_controller.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.0" lines-covered="0" lines-valid="7" package="/presenter/pages/first_page" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>import 'package:dartz/dartz.dart';</code>
+</line>
+<line>
+<code>import 'package:injectable/injectable.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/core/domain/i_use_case.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/core/errors/failures.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/entities/user.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/use_cases/list_all_users.dart';</code>
+</line>
+<line>
+<code>import 'package:mobx/mobx.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>part 'first_page_controller.g.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@injectable</code>
+</line>
+<line>
+<code>class FirstPageController extends _FirstPageControllerBase</code>
+</line>
+<line>
+<code>    with _$FirstPageController {</code>
+</line>
+<line>
+<code>  ListAllUsers listAllUsersUseCase;</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  FirstPageController(this.listAllUsersUseCase) : super(listAllUsersUseCase);</code>
+</line>
+<line>
+<code>}</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>abstract class _FirstPageControllerBase with Store {</code>
+</line>
+<line>
+<code>  final ListAllUsers listAllUsersUseCase;</code>
+</line>
+<line>
+<code>  ReactionDisposer disposeAutoRun;</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  _FirstPageControllerBase(this.listAllUsersUseCase) {</code>
+</line>
+<line hits="0">
+<code>    this.disposeAutoRun = autorun((_) async {</code>
+</line>
+<line hits="0">
+<code>      await fetchUsers();</code>
+</line>
+<line>
+<code>    });</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  @observable</code>
+</line>
+<line>
+<code>  ObservableFuture&lt;Either&lt;Failure, List&lt;User&gt;&gt;&gt; userFuture;</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  @action</code>
+</line>
+<line hits="0">
+<code>  Future fetchUsers() async {</code>
+</line>
+<line hits="0">
+<code>    userFuture = ObservableFuture(</code>
+</line>
+<line hits="0">
+<code>      listAllUsersUseCase(NoParams()).then((result) =&gt; result),</code>
+</line>
+<line>
+<code>    );</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../../"/>
+<base href="../../../"/>
+</coverage>

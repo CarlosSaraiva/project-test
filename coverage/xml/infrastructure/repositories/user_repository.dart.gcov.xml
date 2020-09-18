@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="user_repository.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.25" lines-covered="4" lines-valid="16" package="/infrastructure/repositories" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>import 'package:dio/dio.dart';</code>
+</line>
+<line>
+<code>import 'package:dartz/dartz.dart';</code>
+</line>
+<line>
+<code>import 'package:injectable/injectable.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/core/errors/failures.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/entities/user.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/domain/repositories/i_user.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/infrastructure/data_sources/mock_api.dart';</code>
+</line>
+<line>
+<code>import 'package:mockito/mockito.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@LazySingleton(as: IUserRepository, env: [Environment.test])</code>
+</line>
+<line>
+<code>class UserRepositoryMock extends Mock implements IUserRepository {}</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@LazySingleton(as: IUserRepository, env: [Environment.prod])</code>
+</line>
+<line>
+<code>class UserRepository implements IUserRepository {</code>
+</line>
+<line>
+<code>  final MockApiClient _remoteDataSource;</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="1">
+<code>  UserRepository(this._remoteDataSource);</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  Future&lt;Either&lt;Failure, User&gt;&gt; createUser(User user) {</code>
+</line>
+<line>
+<code>    // TODO: implement createUser</code>
+</line>
+<line hits="0">
+<code>    throw UnimplementedError();</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  Future&lt;Either&lt;Failure, User&gt;&gt; deleteUser(User user) {</code>
+</line>
+<line>
+<code>    // TODO: implement deleteUser</code>
+</line>
+<line hits="0">
+<code>    throw UnimplementedError();</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  @override</code>
+</line>
+<line hits="0">
+<code>  Future&lt;Either&lt;Failure, User&gt;&gt; getUserById(int id) async {</code>
+</line>
+<line>
+<code>    // TODO: implement deleteUser</code>
+</line>
+<line>
+<code>    // this.remoteDataSource.</code>
+</line>
+<line hits="0">
+<code>    throw UnimplementedError();</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  @override</code>
+</line>
+<line hits="1">
+<code>  Future&lt;Either&lt;Failure, List&lt;User&gt;&gt;&gt; getUsers() async {</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line>
+<code>    try {</code>
+</line>
+<line hits="3">
+<code>      final List&lt;User&gt; response = await _remoteDataSource.getUsers();</code>
+<hit count="3" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="1">
+<code>      return Right(response);</code>
+<hit count="1" name="&lt;unnamed&gt;"/>
+</line>
+<line hits="0">
+<code>    } on DioError catch (e) {</code>
+</line>
+<line hits="0">
+<code>      return Left(ServerFailure(e.message));</code>
+</line>
+<line hits="0">
+<code>    } on Exception catch (_) {</code>
+</line>
+<line hits="0">
+<code>      return Left(ServerFailure('GENERAL ERROR'));</code>
+</line>
+<line>
+<code>    }</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  Future&lt;Either&lt;Failure, User&gt;&gt; updateUser(User user) {</code>
+</line>
+<line>
+<code>    // TODO: implement updateUser</code>
+</line>
+<line hits="0">
+<code>    throw UnimplementedError();</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

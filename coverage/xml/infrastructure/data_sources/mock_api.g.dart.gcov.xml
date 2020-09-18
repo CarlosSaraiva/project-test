@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="mock_api.g.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.0" lines-covered="0" lines-valid="13" package="/infrastructure/data_sources" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>// GENERATED CODE - DO NOT MODIFY BY HAND</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>part of 'mock_api.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code>// RetrofitGenerator</code>
+</line>
+<line>
+<code>// **************************************************************************</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>class _MockApiClient implements MockApiClient {</code>
+</line>
+<line hits="0">
+<code>  _MockApiClient(this._dio, {this.baseUrl}) {</code>
+</line>
+<line hits="0">
+<code>    ArgumentError.checkNotNull(_dio, '_dio');</code>
+</line>
+<line hits="0">
+<code>    this.baseUrl ??= 'https://5f5925cd8040620016ab8e74.mockapi.io';</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  final Dio _dio;</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  String baseUrl;</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>  @override</code>
+</line>
+<line hits="0">
+<code>  getUsers() async {</code>
+</line>
+<line>
+<code>    const _extra = &lt;String, dynamic&gt;{};</code>
+</line>
+<line hits="0">
+<code>    final queryParameters = &lt;String, dynamic&gt;{};</code>
+</line>
+<line hits="0">
+<code>    final _data = &lt;String, dynamic&gt;{};</code>
+</line>
+<line hits="0">
+<code>    final Response&lt;List&lt;dynamic&gt;&gt; _result = await _dio.request('/users',</code>
+</line>
+<line>
+<code>        queryParameters: queryParameters,</code>
+</line>
+<line hits="0">
+<code>        options: RequestOptions(</code>
+</line>
+<line>
+<code>            method: 'GET',</code>
+</line>
+<line hits="0">
+<code>            headers: &lt;String, dynamic&gt;{},</code>
+</line>
+<line>
+<code>            extra: _extra,</code>
+</line>
+<line hits="0">
+<code>            baseUrl: baseUrl),</code>
+</line>
+<line>
+<code>        data: _data);</code>
+</line>
+<line hits="0">
+<code>    var value = _result.data</code>
+</line>
+<line hits="0">
+<code>        .map((dynamic i) =&gt; UserModel.fromJson(i as Map&lt;String, dynamic&gt;))</code>
+</line>
+<line hits="0">
+<code>        .toList();</code>
+</line>
+<line>
+<code>    return value;</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../"/>
+<base href="../../"/>
+</coverage>

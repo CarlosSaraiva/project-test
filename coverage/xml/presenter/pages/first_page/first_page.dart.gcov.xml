@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../jgenhtml.xsl"?><coverage branch-rate="NaN" branches-covered="0" branches-valid="0" complexity="0" date="2020-09-18" filename="first_page.dart" function-rate="NaN" functions-covered="0" functions-valid="0" line-rate="0.0" lines-covered="0" lines-valid="20" package="/presenter/pages/first_page" testname="lcov.info" version="1.5">
+<lines>
+<line>
+<code>import 'package:flutter/material.dart';</code>
+</line>
+<line>
+<code>import 'package:flutter_mobx/flutter_mobx.dart';</code>
+</line>
+<line>
+<code>import 'package:injectable/injectable.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/core/di/injectable.dart';</code>
+</line>
+<line>
+<code>import 'package:miccional_app/presenter/pages/first_page/first_page_controller.dart';</code>
+</line>
+<line>
+<code>import 'package:mobx/mobx.dart';</code>
+</line>
+<line>
+<code/>
+</line>
+<line>
+<code>@injectable</code>
+</line>
+<line>
+<code>class FirstPage extends StatelessWidget {</code>
+</line>
+<line>
+<code>  final FirstPageController controller = getIt&lt;FirstPageController&gt;();</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>  @override</code>
+</line>
+<line>
+<code>  Widget build(BuildContext context) {</code>
+</line>
+<line hits="0">
+<code>    return Observer(builder: (_) {</code>
+</line>
+<line hits="0">
+<code>      final result = controller.userFuture.result;</code>
+</line>
+<line>
+<code/>
+</line>
+<line hits="0">
+<code>      return Scaffold(</code>
+</line>
+<line hits="0">
+<code>        appBar: AppBar(</code>
+</line>
+<line hits="0">
+<code>          title: Text('First Page'),</code>
+</line>
+<line>
+<code>        ),</code>
+</line>
+<line hits="0">
+<code>        body: Stack(</code>
+</line>
+<line hits="0">
+<code>          children: [</code>
+</line>
+<line hits="0">
+<code>            ListView.builder(</code>
+</line>
+<line hits="0">
+<code>              itemCount: result?.fold((_) =&gt; 0, (users) =&gt; users.length),</code>
+</line>
+<line hits="0">
+<code>              itemBuilder: (context, int index) {</code>
+</line>
+<line hits="0">
+<code>                return ListTile(</code>
+</line>
+<line hits="0">
+<code>                  title: result?.fold(</code>
+</line>
+<line hits="0">
+<code>                    (_) =&gt; Text(''),</code>
+</line>
+<line hits="0">
+<code>                    (users) =&gt; Text(users[index].name),</code>
+</line>
+<line>
+<code>                  ),</code>
+</line>
+<line>
+<code>                );</code>
+</line>
+<line>
+<code>              },</code>
+</line>
+<line>
+<code>            ),</code>
+</line>
+<line hits="0">
+<code>            Visibility(</code>
+</line>
+<line hits="0">
+<code>              visible: controller.userFuture.status != FutureStatus.fulfilled &amp;&amp;</code>
+</line>
+<line hits="0">
+<code>                  controller.userFuture.status != FutureStatus.rejected,</code>
+</line>
+<line hits="0">
+<code>              child: Align(</code>
+</line>
+<line hits="0">
+<code>                child: CircularProgressIndicator(),</code>
+</line>
+<line>
+<code>              ),</code>
+</line>
+<line>
+<code>            )</code>
+</line>
+<line>
+<code>          ],</code>
+</line>
+<line>
+<code>        ),</code>
+</line>
+<line>
+<code>      );</code>
+</line>
+<line>
+<code>    });</code>
+</line>
+<line>
+<code>  }</code>
+</line>
+<line>
+<code>}</code>
+</line>
+</lines>
+<config branch-coverage="true" description-file="false" function-coverage="true" genhtml_hi_limit="90" genhtml_med_limit="75" legend="false" no-sort="false" no-source="false"/>
+<base href="../../../"/>
+<base href="../../../"/>
+</coverage>
