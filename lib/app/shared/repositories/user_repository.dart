@@ -1,11 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-
 import 'package:miccional_app/app/core/errors/failures.dart';
 import 'package:miccional_app/app/core/external/mock_api.dart';
-import 'package:miccional_app/app/shared/entities/user.dart';
-import 'package:miccional_app/app/shared/interfaces/i_user.dart';
+import 'package:miccional_app/app/domain/entities/user.dart';
+import 'package:miccional_app/app/domain/repositories/i_user.dart';
 
 import 'package:mockito/mockito.dart';
 
@@ -44,8 +43,6 @@ class UserRepository implements IUserRepository {
       return Right(response);
     } on DioError catch (e) {
       return Left(ServerFailure(e.message));
-    } on Exception catch (_) {
-      return Left(ServerFailure('GENERAL ERROR'));
     }
   }
 

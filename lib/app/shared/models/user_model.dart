@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:miccional_app/app/shared/entities/user.dart';
+import 'package:miccional_app/app/domain/entities/user.dart';
 
 part 'user_model.g.dart';
 

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:injectable/injectable.dart';
 import 'package:miccional_app/app/core/di/injectable.dart';
-import 'package:miccional_app/app/modules/records/first_page/first_page_controller.dart';
-
+import 'package:miccional_app/app/modules/first_page/first_page_controller.dart';
 import 'package:mobx/mobx.dart';
 
 @injectable

@@ -9,10 +9,10 @@ import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
 import 'register_modules.dart';
-import '../../modules/records/first_page/first_page.dart';
-import '../../modules/records/first_page/first_page_controller.dart';
-import '../../shared/interfaces/i_user.dart';
-import '../../shared/use_cases/list_all_users.dart';
+import '../../modules/first_page/first_page.dart';
+import '../../modules/first_page/first_page_controller.dart';
+import '../../domain/repositories/i_user.dart';
+import '../../domain/use_cases/list_all_users.dart';
 import '../external/mock_api.dart';
 import '../../shared/repositories/user_repository.dart';
 
@@ -39,7 +39,7 @@ GetIt $initGetIt(
   gh.lazySingleton<MockApiClient>(() => registerModules.dioMock,
       registerFor: {_test});
   gh.factoryParam<MockApiClient, String, dynamic>(
-      (baseUrl, _) => MockApiClient.dioMock(get<Dio>(), baseUrl: baseUrl),
+      (baseUrl, _) => MockApiClient.dio(get<Dio>(), baseUrl: baseUrl),
       registerFor: {_prod});
   gh.factory<FirstPageController>(
       () => FirstPageController(get<ListAllUsers>()));

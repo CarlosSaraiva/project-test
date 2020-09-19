@@ -9,8 +9,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import 'first_page/first_page.dart';
-import 'second_page/records_page.dart';
+import '../first_page/first_page.dart';
+import '../second_page/records_page.dart';
 
 class Routes {
   static const String firstPage = '/';

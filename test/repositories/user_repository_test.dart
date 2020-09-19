@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart' as di;
 import 'package:miccional_app/app/core/di/injectable.dart';
 import 'package:miccional_app/app/core/errors/failures.dart';
 import 'package:miccional_app/app/core/external/mock_api.dart';
-import 'package:miccional_app/app/shared/entities/user.dart';
+import 'package:miccional_app/app/domain/entities/user.dart';
 import 'package:miccional_app/app/shared/models/user_model.dart';
 import 'package:miccional_app/app/shared/repositories/user_repository.dart';
 
