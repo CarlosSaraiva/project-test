@@ -18,7 +18,8 @@ default_platform(:android)
 platform :android do
   desc "Submit a new version to the Internal Tests"
   lane :internal do
-    gradle(tasks: "[clean, bundle]", build_type: 'Release')
+    gradle(task: "clean")
+    gradle(task: "bundle", build_type: 'Release')
     upload_to_play_store(track: "internal", aab:"../build/app/outputs/bundle/release/app-release.aab")
   end  
 

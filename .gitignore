@@ -9,6 +9,7 @@
 .history
 .svn/
 .keys/
+.chglog
 
 # IntelliJ related
 *.iml
