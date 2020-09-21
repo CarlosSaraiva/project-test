@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import '../../modules/intro/tutorial.page.dart';
 import '../../modules/intro/welcome.page.dart';
 import '../../shared/navigators/bottom_tab_navigator.dart';
+import 'core.guard.dart';
 
 class Routes {
   static const String welcomePage = '/';
@@ -28,7 +29,7 @@ class RootRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
-    RouteDef(Routes.welcomePage, page: WelcomePage),
+    RouteDef(Routes.welcomePage, page: WelcomePage, guards: [CoreGuard]),
     RouteDef(Routes.tutorialPage, page: TutorialPage),
     RouteDef(Routes.bottomTabNavigator, page: BottomTabNavigator),
   ];

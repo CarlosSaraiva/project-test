@@ -7,13 +7,18 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'register_modules.dart';
 import '../../modules/first_page/first_page.dart';
 import '../../modules/first_page/first_page_controller.dart';
+import '../../domain/use_cases/get_preferences.dart';
+import '../../domain/repositories/I_preferences.dart';
 import '../../domain/repositories/i_user.dart';
 import '../../domain/use_cases/list_all_users.dart';
 import '../external/mock_api.dart';
+import '../../shared/repositories/preferences_repository.dart';
+import '../../domain/use_cases/save_locale.dart';
 import '../../shared/repositories/user_repository.dart';
 
 /// Environment names
@@ -33,6 +38,8 @@ GetIt $initGetIt(
   gh.lazySingleton<Dio>(() => registerModules.dio, registerFor: {_prod});
   gh.factory<DioMock>(() => DioMock());
   gh.factory<FirstPage>(() => FirstPage());
+  gh.lazySingleton<IPreferencesRepository>(() => PreferencesRepositoryMock(),
+      registerFor: {_test});
   gh.lazySingleton<IUserRepository>(() => UserRepositoryMock(),
       registerFor: {_test});
   gh.lazySingleton<ListAllUsers>(() => ListAllUsers(get<IUserRepository>()));
@@ -41,10 +48,20 @@ GetIt $initGetIt(
   gh.factoryParam<MockApiClient, String, dynamic>(
       (baseUrl, _) => MockApiClient.dio(get<Dio>(), baseUrl: baseUrl),
       registerFor: {_prod});
+  gh.lazySingleton<SaveLocaleUseCase>(
+      () => SaveLocaleUseCase(get<IPreferencesRepository>()));
   gh.factory<FirstPageController>(
       () => FirstPageController(get<ListAllUsers>()));
+  gh.lazySingleton<GetPreferencesUseCase>(
+      () => GetPreferencesUseCase(get<IPreferencesRepository>()));
+  gh.lazySingleton<IPreferencesRepository>(
+      () => PreferencesRepository(get<SharedPreferences>()),
+      registerFor: {_prod});
   gh.lazySingleton<IUserRepository>(() => UserRepository(get<MockApiClient>()),
       registerFor: {_prod});
+
+  // Eager singletons must be registered in the right order
+  gh.singletonAsync<SharedPreferences>(() => registerModules.sharedPreferences);
   return get;
 }
 
