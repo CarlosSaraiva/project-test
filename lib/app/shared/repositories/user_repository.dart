@@ -5,7 +5,6 @@ import 'package:miccional_app/app/core/errors/failures.dart';
 import 'package:miccional_app/app/core/external/mock_api.dart';
 import 'package:miccional_app/app/domain/entities/user.dart';
 import 'package:miccional_app/app/domain/repositories/i_user.dart';
-
 import 'package:mockito/mockito.dart';
 
 @LazySingleton(as: IUserRepository, env: [Environment.test])

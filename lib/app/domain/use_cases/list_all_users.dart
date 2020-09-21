@@ -6,7 +6,7 @@ import 'package:miccional_app/app/domain/entities/user.dart';
 import 'package:miccional_app/app/domain/repositories/i_user.dart';
 
 @lazySingleton
-class ListAllUsers implements IUseCase<List<User>, NoParams> {
+class ListAllUsers implements IUseCaseFuture<List<User>, NoParams> {
   final IUserRepository _userRepository;
 
   ListAllUsers(this._userRepository);
