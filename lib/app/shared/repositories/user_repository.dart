@@ -2,9 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:miccional_app/app/core/errors/failures.dart';
-import 'package:miccional_app/app/core/external/mock_api.dart';
-import 'package:miccional_app/app/domain/entities/user.dart';
-import 'package:miccional_app/app/domain/repositories/i_user.dart';
+import 'package:miccional_app/app/shared/external/mock_api.dart';
+import 'package:miccional_app/app/shared/interfaces/i_user.dart';
+import 'package:miccional_app/app/shared/models/user_model.dart';
 import 'package:mockito/mockito.dart';
 
 @LazySingleton(as: IUserRepository, env: [Environment.test])

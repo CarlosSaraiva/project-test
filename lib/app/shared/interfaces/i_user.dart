@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:miccional_app/app/core/errors/failures.dart';
-import 'package:miccional_app/app/domain/entities/user.dart';
+import 'package:miccional_app/app/shared/models/user_model.dart';
 
 abstract class IUserRepository {
   Future<Either<Failure, List<User>>> getUsers();

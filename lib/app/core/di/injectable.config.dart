@@ -11,14 +11,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'register_modules.dart';
 import '../../modules/first_page/first_page_controller.dart';
-import '../../domain/use_cases/get_preferences.dart';
-import '../../domain/repositories/I_preferences.dart';
-import '../../domain/repositories/i_user.dart';
-import '../../domain/use_cases/list_all_users.dart';
-import '../external/mock_api.dart';
+import '../../shared/use_cases/get_preferences.dart';
+import '../../shared/interfaces/I_preferences.dart';
+import '../../shared/interfaces/i_user.dart';
+import '../../shared/use_cases/list_all_users.dart';
+import '../../shared/external/mock_api.dart';
 import '../../shared/repositories/preferences_repository.dart';
 import '../../modules/profile/profile_page.controller.dart';
-import '../../domain/use_cases/save_locale.dart';
+import '../../shared/use_cases/save_locale.dart';
 import '../../shared/repositories/user_repository.dart';
 
 /// Environment names

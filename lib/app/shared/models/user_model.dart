@@ -1,19 +1,22 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:miccional_app/app/domain/entities/user.dart';
 
 part 'user_model.g.dart';
 
 @JsonSerializable()
-class UserModel extends User {
-  UserModel({
-    @JsonKey(required: false) String id,
-    DateTime createAt,
-    String name,
-    String avatar,
-  }) : super(createAt: createAt, avatar: avatar, name: name, id: id);
+class User {
+  DateTime createAt;
+  String id;
+  String name;
+  String avatar;
 
-  factory UserModel.fromJson(Map<String, dynamic> json) =>
-      _$UserModelFromJson(json);
+  User({
+    this.id,
+    this.createAt,
+    this.name,
+    this.avatar,
+  });
 
-  Map<String, dynamic> toJson() => _$UserModelToJson(this);
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserToJson(this);
 }

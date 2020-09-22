@@ -30,7 +30,7 @@ class _MockApiClient implements MockApiClient {
             baseUrl: baseUrl),
         data: _data);
     var value = _result.data
-        .map((dynamic i) => UserModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => User.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }

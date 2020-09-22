@@ -14,5 +14,5 @@ abstract class MockApiClient {
       _MockApiClient;
 
   @GET("/users")
-  Future<List<UserModel>> getUsers();
+  Future<List<User>> getUsers();
 }

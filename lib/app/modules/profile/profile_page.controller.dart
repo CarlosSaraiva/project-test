@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:miccional_app/app/core/interfaces/i_use_case.dart';
-import 'package:miccional_app/app/domain/use_cases/get_preferences.dart';
-import 'package:miccional_app/app/domain/use_cases/save_locale.dart';
+import 'package:miccional_app/app/shared/interfaces/i_use_case.dart';
+import 'package:miccional_app/app/shared/use_cases/get_preferences.dart';
+import 'package:miccional_app/app/shared/use_cases/save_locale.dart';
 import 'package:mobx/mobx.dart';
 import 'package:easy_localization/easy_localization.dart';
 

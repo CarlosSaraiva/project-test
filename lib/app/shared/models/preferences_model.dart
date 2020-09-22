@@ -1,7 +1,7 @@
-import 'package:miccional_app/app/domain/entities/preferences.dart';
-
-class PreferencesModel extends Preferences {
+class Preferences {
   String locale;
+
+  Preferences({this.locale});
 
   Map<String, dynamic> toMap() {
     return {
