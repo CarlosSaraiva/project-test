@@ -10,7 +10,6 @@ import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'register_modules.dart';
-import '../../modules/first_page/first_page.dart';
 import '../../modules/first_page/first_page_controller.dart';
 import '../../domain/use_cases/get_preferences.dart';
 import '../../domain/repositories/I_preferences.dart';
@@ -18,6 +17,7 @@ import '../../domain/repositories/i_user.dart';
 import '../../domain/use_cases/list_all_users.dart';
 import '../external/mock_api.dart';
 import '../../shared/repositories/preferences_repository.dart';
+import '../../modules/profile/profile_page.controller.dart';
 import '../../domain/use_cases/save_locale.dart';
 import '../../shared/repositories/user_repository.dart';
 
@@ -37,7 +37,6 @@ GetIt $initGetIt(
   final registerModules = _$RegisterModules();
   gh.lazySingleton<Dio>(() => registerModules.dio, registerFor: {_prod});
   gh.factory<DioMock>(() => DioMock());
-  gh.factory<FirstPage>(() => FirstPage());
   gh.lazySingleton<IPreferencesRepository>(() => PreferencesRepositoryMock(),
       registerFor: {_test});
   gh.lazySingleton<IUserRepository>(() => UserRepositoryMock(),
@@ -59,6 +58,8 @@ GetIt $initGetIt(
       registerFor: {_prod});
   gh.lazySingleton<IUserRepository>(() => UserRepository(get<MockApiClient>()),
       registerFor: {_prod});
+  gh.factory<ProfilePageController>(() => ProfilePageController(
+      get<SaveLocaleUseCase>(), get<GetPreferencesUseCase>()));
 
   // Eager singletons must be registered in the right order
   gh.singletonAsync<SharedPreferences>(() => registerModules.sharedPreferences);

@@ -21,11 +21,7 @@ abstract class _FirstPageControllerBase with Store {
   final ListAllUsers listAllUsersUseCase;
   ReactionDisposer disposeAutoRun;
 
-  _FirstPageControllerBase(this.listAllUsersUseCase) {
-    this.disposeAutoRun = autorun((_) async {
-      await fetchUsers();
-    });
-  }
+  _FirstPageControllerBase(this.listAllUsersUseCase);
 
   @observable
   ObservableFuture<Either<Failure, List<User>>> userFuture;

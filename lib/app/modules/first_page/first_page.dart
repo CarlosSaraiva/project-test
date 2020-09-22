@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:injectable/injectable.dart';
 import 'package:miccional_app/app/core/di/injectable.dart';
 import 'package:miccional_app/app/modules/first_page/first_page_controller.dart';
 import 'package:mobx/mobx.dart';
 
-@injectable
-class FirstPage extends StatelessWidget {
-  final FirstPageController controller = getIt<FirstPageController>();
+class FirstPage extends StatefulWidget {
+  @override
+  _FirstPageState createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  FirstPageController controller = getIt<FirstPageController>();
+
+  @override
+  void initState() {
+    super.initState();
+    controller.fetchUsers();
+  }
 
   @override
   Widget build(BuildContext context) {

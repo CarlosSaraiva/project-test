@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:miccional_app/app/modules/profile/profile_router.gr.dart';
 import 'package:miccional_app/app/modules/records/records_router.gr.dart';
 
 class BottomTabNavigator extends StatefulWidget {
@@ -15,7 +16,8 @@ class _BottomTabNavigatorState extends State<BottomTabNavigator> {
       body: IndexedStack(
         index: _currentIndex,
         children: [
-          ExtendedNavigator(router: RecordsRouter()),
+          ExtendedNavigator(router: RecordsRouter(), key: UniqueKey()),
+          ExtendedNavigator(router: ProfileRouter(), key: UniqueKey()),
         ],
       ),
       bottomNavigationBar: Container(
@@ -30,8 +32,8 @@ class _BottomTabNavigatorState extends State<BottomTabNavigator> {
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30.0),
-              topRight: Radius.circular(30.0),
+              topLeft: Radius.circular(15.0),
+              topRight: Radius.circular(15.0),
             ),
             child: BottomNavigationBar(
               onTap: _onTap,
@@ -48,16 +50,6 @@ class _BottomTabNavigatorState extends State<BottomTabNavigator> {
                   backgroundColor: Colors.blue,
                   label: 'Diarios',
                 ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.water_damage),
-                  backgroundColor: Colors.green,
-                  label: 'Dicas',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
-                  backgroundColor: Colors.brown,
-                  label: 'Perfil',
-                )
               ],
             ),
           )),
