@@ -9,7 +9,6 @@
 .history
 .svn/
 .keys/
-.chglog
 .env
 
 # IntelliJ related
