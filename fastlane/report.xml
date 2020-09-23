@@ -5,57 +5,62 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.0031973">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.0020319">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: clean" time="5.3110568">
+      <testcase classname="fastlane.lanes" name="01: flutter_version" time="0.0191574">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: flutter_generate" time="37.3888411">
+      <testcase classname="fastlane.lanes" name="02: flutter_version" time="0.0463308">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: flutter_build" time="72.7967481">
+      <testcase classname="fastlane.lanes" name="03: add_git_tag" time="0.2511705">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: flutter_version" time="0.0640578">
+      <testcase classname="fastlane.lanes" name="04: git-chglog -o ../CHANGELOG.md --config ../.chglog/config.yml" time="0.9161805">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: flutter_version" time="0.0270552">
+      <testcase classname="fastlane.lanes" name="05: read_changelog" time="0.0190317">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: flutter_version" time="0.0082766">
+      <testcase classname="fastlane.lanes" name="06: clean" time="5.132086">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: flutter_version" time="0.0173475">
+      <testcase classname="fastlane.lanes" name="07: flutter_generate" time="34.3975682">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: set_github_release" time="3.20806">
+      <testcase classname="fastlane.lanes" name="08: flutter_build" time="68.4793209">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: flutter_version" time="0.0254984">
+      <testcase classname="fastlane.lanes" name="09: set_github_release" time="2.9396165">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: upload_to_play_store" time="84.3729006">
+      <testcase classname="fastlane.lanes" name="10: flutter_version" time="0.0431978">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: upload_to_play_store" time="86.0149105">
         
       </testcase>
     
