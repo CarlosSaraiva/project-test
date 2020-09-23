@@ -5,52 +5,57 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0140925">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.0031973">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: clean" time="7.4591198">
+      <testcase classname="fastlane.lanes" name="01: clean" time="5.3110568">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: bundleRelease" time="70.177158">
+      <testcase classname="fastlane.lanes" name="02: flutter_generate" time="37.3888411">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: flutter_version" time="0.0318859">
+      <testcase classname="fastlane.lanes" name="03: flutter_build" time="72.7967481">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: flutter_version" time="0.0316911">
+      <testcase classname="fastlane.lanes" name="04: flutter_version" time="0.0640578">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: flutter_version" time="0.0299195">
+      <testcase classname="fastlane.lanes" name="05: flutter_version" time="0.0270552">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: flutter_version" time="0.0157348">
+      <testcase classname="fastlane.lanes" name="06: flutter_version" time="0.0082766">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: set_github_release" time="0.7945739">
+      <testcase classname="fastlane.lanes" name="07: flutter_version" time="0.0173475">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: flutter_version" time="0.0373528">
+      <testcase classname="fastlane.lanes" name="08: set_github_release" time="3.20806">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="9: upload_to_play_store" time="95.7890962">
+      <testcase classname="fastlane.lanes" name="09: flutter_version" time="0.0254984">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: upload_to_play_store" time="84.3729006">
         
       </testcase>
     

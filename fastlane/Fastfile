@@ -15,19 +15,28 @@
 
 default_platform(:android)
 
+fastlane_require 'dotenv'
+
+before_all do
+  Dotenv.overload '../.env'
+end
+
 platform :android do
   desc "Submit a new version to the Internal Tests"
   lane :internal do
     gradle(task: "clean", project_dir: "./android")
-    gradle(task: "bundle", build_type: 'Release', project_dir: "./android",)
 
-    #api_token: ENV["GITHUB_TOKEN"],
-    
+    flutter_generate()
+
+    output_file = flutter_build(
+      build: 'appbundle',
+    )
+
     github_release = set_github_release(
       repository_name: "justdigital/miccional-app",
-      api_token: "c7b4a1c927bf27caf865c5d3343fd5721847fbcc",
+      api_token: ENV["GITHUB_TOKEN"],
       name: "v" + flutter_version(pubspec_location: "pubspec.yaml")["version_name"] + "-build." + flutter_version(pubspec_location: "pubspec.yaml")["version_code"],
-      tag_name: flutter_version(pubspec_location: "pubspec.yaml")["version_name"] + flutter_version(pubspec_location: "pubspec.yaml")["version_code"],
+      tag_name: flutter_version(pubspec_location: "pubspec.yaml")["version_name"] + "-build." + flutter_version(pubspec_location: "pubspec.yaml")["version_code"],
       description: (File.read("changelog") rescue "No changelog provided"),
       commitish: "dev",
       is_prerelease: true,
