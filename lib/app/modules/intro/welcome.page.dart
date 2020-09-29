@@ -20,7 +20,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TestPage(
-      color: Colors.blue,
+      color: Colors.white,
       mainText: 'welcome-page.title'.tr(),
       buttonText: 'Go to MAIN',
       route: '/tutorial',

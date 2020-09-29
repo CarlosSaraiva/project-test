@@ -34,25 +34,32 @@ class TestPage extends StatelessWidget {
         color: color,
         child: Column(
           children: [
-            Container(
-                child: RichText(
-              text: TextSpan(
-                  text: mainText,
-                  style: TextStyle(
-                    color: Colors.white,
-                  )),
-            )),
-            RaisedButton(
-              onPressed: onPress,
-              child: RichText(
-                text: TextSpan(
-                  text: ' $buttonText ($route)',
-                  style: TextStyle(color: Colors.black),
-                ),
-              ),
-            )
+            Expanded(
+              child: Container(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                        text: mainText,
+                        style: TextStyle(
+                          color: Colors.white,
+                        )),
+                  ),
+                  RaisedButton(
+                    onPressed: onPress,
+                    child: RichText(
+                      text: TextSpan(
+                        text: ' $buttonText ($route)',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  )
+                ],
+              )),
+            ),
           ],
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
         ),
       ),
     );
