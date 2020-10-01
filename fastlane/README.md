@@ -20,7 +20,7 @@ or alternatively using `brew install fastlane`
 ```
 fastlane android internal
 ```
-Submit a new version to the Internal Tests
+Submit a new apk to the Github Releases
 
 ----
 

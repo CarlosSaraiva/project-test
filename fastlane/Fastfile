@@ -23,7 +23,7 @@ end
 
 platform :android do
   desc "Submit a new apk to the Github Releases"
-  lane :internal do
+  lane :'gh-apk-release' do
     current_version = "v" + flutter_version(pubspec_location: "pubspec.yaml")["version_name"] + "-build." + flutter_version(pubspec_location: "pubspec.yaml")["version_code"]
 
     git_commit(path: ["."], message: "build: " + current_version, skip_git_hooks: true)
