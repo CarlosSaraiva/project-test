@@ -3,6 +3,7 @@ import 'package:flutter_data/flutter_data.dart';
 import 'package:miccional_app/app/core/di/injectable.dart';
 import 'package:miccional_app/app/shared/models/test.dart';
 import 'package:uuid/uuid.dart';
+import 'package:auto_route/auto_route.dart';
 
 class DiaryPage extends StatefulWidget {
   const DiaryPage({Key key}) : super(key: key);
@@ -59,6 +60,12 @@ class _DiaryPageState extends State<DiaryPage> {
                             avatar: 'teste',
                             createAt: DateTime.now(),
                           ).init().save();
+                        },
+                      ),
+                      RaisedButton(
+                        child: Text('Go to /welcome'),
+                        onPressed: () {
+                          context.navigator.push('/welcome');
                         },
                       )
                     ],

@@ -7,7 +7,7 @@ import 'package:miccional_app/app/shared/navigators/bottom_tab_navigator.dart';
 
 @MaterialAutoRouter(routes: <AutoRoute>[
   MaterialRoute(page: DiaryPage, initial: true, guards: [CoreGuard]),
-  MaterialRoute(page: WelcomePage),
+  MaterialRoute(page: WelcomePage, path: '/welcome'),
   MaterialRoute(page: TutorialPage, path: '/tutorial'),
   MaterialRoute(page: BottomTabNavigator, path: '/main')
 ])

@@ -17,7 +17,7 @@ import 'core.guard.dart';
 
 class Routes {
   static const String diaryPage = '/';
-  static const String welcomePage = '/welcome-page';
+  static const String welcomePage = '/welcome';
   static const String tutorialPage = '/tutorial';
   static const String bottomTabNavigator = '/main';
   static const all = <String>{
