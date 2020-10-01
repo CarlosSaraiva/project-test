@@ -302,7 +302,7 @@ class DateSelector extends StatefulWidget {
 }
 
 class _DateSelectorState extends State<DateSelector> {
-  DateTime _currentSelectedDate = DateTime.now();
+  // DateTime _currentSelectedDate = DateTime.now();
   int _currentPageIndex = 0;
   final DateTime currentDateTime = DateTime.now();
 
@@ -332,7 +332,7 @@ class _DateSelectorState extends State<DateSelector> {
 
   void _onChange(int index, DateTime date) {
     setState(() {
-      _currentSelectedDate = date;
+      // _currentSelectedDate = date;
       _currentPageIndex = index;
     });
   }

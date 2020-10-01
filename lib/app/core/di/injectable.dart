@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:miccional_app/app/core/di/injectable.config.dart';
+import 'package:miccional_app/main.data.dart';
 
 final getIt = GetIt.instance;
 
@@ -9,5 +10,10 @@ final getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: false, // default
 )
-void configureDependencies(String environment) =>
-    $initGetIt(getIt, environment: environment);
+Future<GetIt> configureDependencies(String environment) async {
+  getIt.registerRepositories(clear: true);
+  var getItinstance = $initGetIt(getIt, environment: environment);
+  await getIt.allReady();
+
+  return getItinstance;
+}

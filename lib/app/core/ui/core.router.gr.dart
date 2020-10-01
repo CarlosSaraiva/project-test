@@ -9,16 +9,19 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../modules/diary/diary.page.dart';
 import '../../modules/intro/tutorial.page.dart';
 import '../../modules/intro/welcome.page.dart';
 import '../../shared/navigators/bottom_tab_navigator.dart';
 import 'core.guard.dart';
 
 class Routes {
-  static const String welcomePage = '/';
+  static const String diaryPage = '/';
+  static const String welcomePage = '/welcome-page';
   static const String tutorialPage = '/tutorial';
   static const String bottomTabNavigator = '/main';
   static const all = <String>{
+    diaryPage,
     welcomePage,
     tutorialPage,
     bottomTabNavigator,
@@ -29,13 +32,20 @@ class RootRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
-    RouteDef(Routes.welcomePage, page: WelcomePage, guards: [CoreGuard]),
+    RouteDef(Routes.diaryPage, page: DiaryPage, guards: [CoreGuard]),
+    RouteDef(Routes.welcomePage, page: WelcomePage),
     RouteDef(Routes.tutorialPage, page: TutorialPage),
     RouteDef(Routes.bottomTabNavigator, page: BottomTabNavigator),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, AutoRouteFactory>{
+    DiaryPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const DiaryPage(),
+        settings: data,
+      );
+    },
     WelcomePage: (data) {
       final args = data.getArgs<WelcomePageArguments>(
         orElse: () => WelcomePageArguments(),

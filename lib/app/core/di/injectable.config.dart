@@ -7,8 +7,10 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:flutter_data/flutter_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../modules/diary/diary.cubit.dart';
 import 'register_modules.dart';
 import '../../modules/first_page/first_page_controller.dart';
 import '../../shared/use_cases/get_preferences.dart';
@@ -19,6 +21,7 @@ import '../../shared/external/mock_api.dart';
 import '../../shared/repositories/preferences_repository.dart';
 import '../../modules/profile/profile_page.controller.dart';
 import '../../shared/use_cases/save_locale.dart';
+import '../../shared/models/test.dart';
 import '../../shared/repositories/user_repository.dart';
 
 /// Environment names
@@ -35,6 +38,7 @@ GetIt $initGetIt(
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
   final registerModules = _$RegisterModules();
+  gh.factory<DiaryCubit>(() => DiaryCubit(get<Repository<Test>>()));
   gh.lazySingleton<Dio>(() => registerModules.dio, registerFor: {_prod});
   gh.factory<DioMock>(() => DioMock());
   gh.lazySingleton<IPreferencesRepository>(() => PreferencesRepositoryMock(),
