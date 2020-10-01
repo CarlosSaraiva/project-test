@@ -37,20 +37,20 @@ platform :android do
       section_identifier: "[" +  current_version + "]",	# Specify what section to read
     )
 
-    flutter_bootstrap(
-      flutter_channel: 'master',
-      # Only do this when building for Android, otherwise we would enforce
-      # existence of ANDROID_SDK_ROOT environment variable, which is completely
-      # unnecessary when building for iOS.
-      android_licenses: {
-        'android-sdk-license' => '24333f8a63b6825ea9c5514f83c2829b004d1fee',
-      },
-    ) 
+    # flutter_bootstrap(
+    #   flutter_channel: 'master',
+    #   # Only do this when building for Android, otherwise we would enforce
+    #   # existence of ANDROID_SDK_ROOT environment variable, which is completely
+    #   # unnecessary when building for iOS.
+    #   android_licenses: {
+    #     'android-sdk-license' => '24333f8a63b6825ea9c5514f83c2829b004d1fee',
+    #   },
+    # ) 
 
     flutter_generate()
 
     output_file = flutter_build(
-      build: 'appbundle',
+      build: 'apk',
     )    
 
     github_release = set_github_release(
