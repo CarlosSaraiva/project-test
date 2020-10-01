@@ -2,6 +2,16 @@
 ## [Unreleased]
 
 
+<a name="v0.1.0-build.17"></a>
+## [v0.1.0-build.17] - 2020-10-01
+### Chore
+- update path to apk
+
+### Feat
+- add button to navigate to the others pages
+- disable cache clear from flutter data
+
+
 <a name="v0.1.0-build.16"></a>
 ## [v0.1.0-build.16] - 2020-10-01
 ### Chore
@@ -81,7 +91,8 @@
 - update controller example
 
 
-[Unreleased]: https://github.com/justdigital/miccional-app/compare/v0.1.0-build.16...HEAD
+[Unreleased]: https://github.com/justdigital/miccional-app/compare/v0.1.0-build.17...HEAD
+[v0.1.0-build.17]: https://github.com/justdigital/miccional-app/compare/v0.1.0-build.16...v0.1.0-build.17
 [v0.1.0-build.16]: https://github.com/justdigital/miccional-app/compare/v0.1.0-build.15...v0.1.0-build.16
 [v0.1.0-build.15]: https://github.com/justdigital/miccional-app/compare/v0.1.0-build.14...v0.1.0-build.15
 [v0.1.0-build.14]: https://github.com/justdigital/miccional-app/compare/v0.1.0-build.13...v0.1.0-build.14
