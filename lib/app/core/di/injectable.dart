@@ -11,7 +11,7 @@ final getIt = GetIt.instance;
   asExtension: false, // default
 )
 Future<GetIt> configureDependencies(String environment) async {
-  getIt.registerRepositories(clear: true);
+  getIt.registerRepositories();
   var getItinstance = $initGetIt(getIt, environment: environment);
   await getIt.allReady();
 
