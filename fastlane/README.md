@@ -16,9 +16,9 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## Android
-### android internal
+### android gh-apk-release
 ```
-fastlane android internal
+fastlane android gh-apk-release
 ```
 Submit a new apk to the Github Releases
 
