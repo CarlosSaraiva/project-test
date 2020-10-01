@@ -56,6 +56,8 @@ dependencies:
   uuid: ^2.2.2
   freezed_annotation: ^0.11.0
   flutter_offline: ^0.3.0
+  onesignal_flutter: ^2.0.0
+  flutter_dotenv: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -108,6 +110,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/translations/
+    - .env
 
 flutter_intl:
   enabled: true
