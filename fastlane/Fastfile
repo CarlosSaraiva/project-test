@@ -22,7 +22,7 @@ before_all do
 end
 
 platform :android do
-  desc "Submit a new version to the Internal Tests"
+  desc "Submit a new apk to the Github Releases"
   lane :internal do
     current_version = "v" + flutter_version(pubspec_location: "pubspec.yaml")["version_name"] + "-build." + flutter_version(pubspec_location: "pubspec.yaml")["version_code"]
 
@@ -51,7 +51,7 @@ platform :android do
 
     output_file = flutter_build(
       build: 'apk',
-    )    
+    )
 
     github_release = set_github_release(
       repository_name: "justdigital/miccional-app",
@@ -62,13 +62,14 @@ platform :android do
       description: release_notes,
       commitish: "dev",
       is_prerelease: true,
-      upload_assets: ["./build/app/outputs/bundle/release/app-release.aab"]
+      upload_assets: ["./build/app/outputs/apk/release/app-release.apk"]
+      # upload_assets: ["./build/app/outputs/bundle/release/app-release.aab"]
     )
 
-    upload_to_play_store(
-      track: "internal",
-      aab:"./build/app/outputs/bundle/release/app-release.aab",
-      version_code: flutter_version(pubspec_location: "pubspec.yaml")["version_code"]
-    )    
+    # upload_to_play_store(
+    #   track: "internal",
+    #   aab:"./build/app/outputs/bundle/release/app-release.aab",
+    #   version_code: flutter_version(pubspec_location: "pubspec.yaml")["version_code"]
+    # )
   end
 end
